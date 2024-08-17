@@ -4,13 +4,13 @@
 
 ## Install 
 ```bash
-pnpm add vue3-use-print
+pnpm add use-lazy-data
 ```
 ```bash
-yarn add vue3-use-print
+yarn add use-lazy-data
 ```
 ```bash
-npm install vue3-use-print
+npm install use-lazy-data
 ```
 
 ## Usage

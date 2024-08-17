@@ -1,6 +1,6 @@
 {
   "name": "use-lazy-data",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Load data when in use - 使用时加载数据",
   "license": "MIT",
   "repository": {
