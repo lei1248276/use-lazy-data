@@ -1,0 +1,41 @@
+{
+  "name": "use-lazy-data",
+  "version": "1.0.0",
+  "description": "Load data when in use - 使用时加载数据",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lei1248276/use-lazy-data.git"
+  },
+  "author": "Jaye",
+  "keywords": [
+    "lazy",
+    "lazyData",
+    "ts"
+  ],
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@types/node": "^22.4.0",
+    "eslint": "^8.57.0",
+    "typescript": "^5.5.3",
+    "typescript-eslint": "^8.1.0",
+    "vite": "^5.4.1",
+    "vite-plugin-dts": "^4.0.3"
+  }
+}
