@@ -1,7 +1,7 @@
 {
   "name": "use-lazy-data",
-  "version": "1.0.1",
-  "description": "Load data when in use - 使用时加载数据",
+  "version": "1.1.0",
+  "description": "Load when used and only once - (使用时加载且只加载一次)",
   "license": "MIT",
   "repository": {
     "type": "git",
