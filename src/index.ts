@@ -1,6 +1,6 @@
 /**
  * @description Load when used and only once - (使用时加载且只加载一次)
- * @param getter () => ({}) | { value: () => ({}) }
+ * @param getter - () => ({})
  * @example
  * ```ts
  * import useLazyData from 'use-lazy-data'
@@ -19,6 +19,33 @@
  * console.log(data2) -> "{ name: 'Jaye' }"
  * ```
  */
+export default function useLazyData<T extends () => any>(getter: T): { value: ReturnType<T> }
+
+/**
+ * @description Load when used and only once - (使用时加载且只加载一次)
+ * @param getter - { prop: () => ({}) }
+ * @example
+ * ```ts
+ * import useLazyData from 'use-lazy-data'
+ * const data = useLazyData(() => ({
+ *  name: 'Jaye'
+ * }))
+ * console.log(data) -> "{}"
+ * data.value
+ * console.log(data) -> "{ value: { name: 'Jaye' } }"
+ *
+ * const data2 = useLazyData({
+ *   name: () => 'Jaye',
+ * })
+ * console.log(data2) -> "{}"
+ * data2.name
+ * console.log(data2) -> "{ name: 'Jaye' }"
+ * ```
+ */
+// eslint-disable-next-line
+export default function useLazyData<T extends Record<string, () => any>>(getter: T): { [K in keyof T]: ReturnType<T[K]> }
+
+// eslint-disable-next-line
 export default function useLazyData<T extends Record<string, () => any> | (() => any)>(
   getter: T
 ): T extends Record<string, () => any>
