@@ -1,6 +1,6 @@
 {
   "name": "use-lazy-data",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Load when used and only once - (使用时加载且只加载一次)",
   "license": "MIT",
   "repository": {
